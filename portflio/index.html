@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gabriel Lemos Barbosa | Portfólio</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="navbar">
+        <img id="logo" src="./img/logo.png" alt="">
+        <button id="btnMenu" class="menu-toggle">☰</button>
+        <ul class="nav-links">
+          <li><a href="#home">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><button id="modoEscuro">🌙</button></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="sobre" class="secao">
+      <div class="sobre-container">
+         <h2>Sobre Mim</h2>
+      <p>Sou desenvolvedor web front-end, com foco na criação de interfaces modernas, responsivas e centradas na
+        experiência do usuário. Transformar ideias em soluções digitais funcionais, aliando design
+        intuitivo com recursos interativos.</p>
+      <p>Atualmente, estou focado em projetos que desafiem minha criatividade e ampliem meu conhecimento. Acredito que a
+        tecnologia deve ser acessível e agradável, e trabalho para criar experiências que não apenas atendam às
+        necessidades dos usuários, mas também superem suas expectativas.
+      </p>
+      <p>Estou sempre aberto a novas oportunidades e colaborações. Se você está procurando um desenvolvedor apaixonado e
+        comprometido, ficarei feliz em conversar!</p>
+      </p>
+    </div>
+      <!-- Gráfico das tecnologias -->
+    <div class="grafico-tecnologias" style="max-width: 600px; margin-top: 2rem;">
+      <h2>Tecnologias</h2>
+      <canvas id="graficoTecnologias"></canvas>
+    </div>
+    </section>
+
+    <section id="projetos" class="secao">
+      <h2>Projetos</h2>
+      <div class="cards-projetos" id="projetos-portfolio"></div>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <form action="https://formspree.io/f/movdywrb" method="POST">
+        <label>
+          Seu E-mail:
+          <input type="email" name="email">
+        </label>
+        <label>
+          Sua Mensagem:
+          <textarea name="message"></textarea>
+        </label>
+        <!-- your other form fields go here -->
+        <button type="submit" class="btn-enviar">Enviar</button>
+      </form>
+
+    </section>
+  </main>
+  <footer class="dev-footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h2>&lt;/Dev Portfolio&gt;</h2>
+        <p>Desenvolvedor web, gosto de transformar ideias em código. Sempre aprendendo, sempre evoluindo.</p>
+        <p class="tech-stack">Stack atual: <span>HTML</span> • <span>CSS</span> • <span>JavaScript</span> •
+          <span>React</span></p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Conecte-se comigo</h3>
+        <ul>
+          <li><a href="https://github.com/devgabrielbarbosa" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+          <li><a href="https://www.instagram.com/gabriel_lemosb/" target="_blank"><i class="fab fa-instagram"></i>
+              Instagram</a></li>
+          <li><a href="https://www.linkedin.com/in/gabriel-lemos-383166248/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+         <li>
+          <a href="https://wa.me/5563991300213?text=Ola,%20tudo%20bem%20eu%20gostaria%20de%20saber%20mais%20informações%20sobre,%20podemos%20conversa?" target="_blank">
+            WhatsApp
+          </a>
+        </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <code>// © 2025 — Portfólio de Desenvolvedor</code>
+    </div>
+  </footer>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="./script.js"></script>
+  <script type="module" src="../firebase/firebase-config.js"></script>
+</body>
+</html>
