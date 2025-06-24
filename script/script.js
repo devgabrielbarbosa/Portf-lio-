@@ -84,8 +84,8 @@ projetosContainer.addEventListener('click', (e) => {
 
     descricao.classList.toggle('expandido'); // Alterna classe
     e.target.textContent = descricao.classList.contains('expandido')
-      ? 'Mostrar menos'
-      : 'Leia mais';
+      ? 'Ler mais'
+      : 'Mostrar menos';
   }
 });
 
