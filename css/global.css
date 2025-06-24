@@ -1,0 +1,58 @@
+/* ===========================
+   Reset e variáveis
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  font-family: Arial, sans-serif;
+  background: #1c1c2d;
+  color: #d7d7d7;
+  transition: background 0.3s, color 0.3s;
+  scroll-behavior: smooth;
+  padding-top: 50px; /* ajuste conforme a altura do header */
+}
+body.dark-mode {
+  background: #f4f4f4;
+  color: #000000;
+}
+#modoEscuro {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  color: inherit;
+  transition: color 0.3s;
+}
+/* Estilo padrão para inputs, textarea e botão */
+input,
+textarea,
+button {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  background: #fff;
+  color: #000000;
+}
+
+/* Quando o body estiver em modo escuro */
+body.dark-mode input,
+body.dark-mode textarea {
+  background: #ffffff;
+  color: #464646;
+  border: 1px solid #555;
+}
+p.dark-mode {
+  color: #222;
+}
+/* Opcional: placeholder mais claro */
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #d4d4d4;
+}

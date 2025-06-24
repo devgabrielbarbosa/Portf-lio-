@@ -1,0 +1,85 @@
+
+/* ===========================
+   Responsividade
+=========================== */
+@media (max-width: 768px) {
+  main{
+    margin: 10px auto;
+  }
+  .navbar{
+    margin: 0;
+    padding: 0;
+  }
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    background: #111;
+    width: 80px;
+    padding: 1rem;
+    border: 1px solid #222;
+    border-radius: 8px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+    width: 100%;
+    text-align: auto;
+    }
+
+  .menu-toggle {
+    display: block;
+  }
+  #logo{
+  width: 15%;
+  height: 10;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(30, 144, 255, 0.3);
+  padding: 0 auto;
+ 
+}
+
+  main {
+    padding: 1rem;
+  }
+
+  .cards-projetos {
+    flex-direction: column;
+  }
+ .projeto {
+    width: 100%;
+    margin:10px auto;
+    gap: 20px;
+    height: auto;
+    padding: 20px;
+ }
+
+  .habilidades {
+    flex-direction: column;
+  }
+  img{
+    width: 100%;
+    height: auto;
+  }
+  nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: currentColor; /* cor igual ao texto */
+  transition: width 0.7s ease;
+  z-index: -1; /* fica atrás do texto */
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #eaeaea;
+}
+
+/* Ao passar o mouse */
+nav ul li a:hover::after {
+  width: 100%;
+}
+}

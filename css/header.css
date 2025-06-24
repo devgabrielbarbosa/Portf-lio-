@@ -1,0 +1,111 @@
+
+/* ===========================
+   Header e navegação
+=========================== */
+header {
+  background: #111;
+  padding: 20px;
+  border-bottom: 1px solid #222;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #111;
+  border-bottom: 1px solid #222;
+  z-index: 1000; /* Fica acima do conteúdo */
+}
+h2 {
+  font-size: 3rem;
+  color: #4e9af1;
+  margin-top: 50px;
+  font-weight: 700;
+  text-align: center;
+
+}
+nav ul li {
+  display: flex;
+  align-items: center; /* centraliza verticalmente o conteúdo */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.navbar h1 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: #eaeaea;
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a, #modoEscuro {
+  color: #eaeaea;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover, #modoEscuro:hover {
+  color: #4e9af1;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.3rem 0;
+}
+
+/* Pseudo-elemento para a barra */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: currentColor; /* cor igual ao texto */
+  transition: width 0.3s ease;
+  z-index: -1; /* fica atrás do texto */
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #eaeaea;
+}
+
+/* Ao passar o mouse */
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+#logo{
+  max-width: 80px;
+  height: 5%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(19, 137, 255, 0.3);
+  padding: 0;
+  margin: 0;
+}

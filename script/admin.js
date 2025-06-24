@@ -78,10 +78,10 @@ async function exibirProjetosAdmin() {
           <img src="${imagemURL}" alt="Imagem do Projeto" style="max-width: 150px; max-height: 150px;" />
           <h3>${projeto.titulo}</h3>
           <p>${projeto.descricao}</p>
-          ${link ? `<a href="${link}" target="_blank">Ver Projeto</a>` : ""}
-          <br>
+        
           <button class="editar-btn" data-id="${id}">Editar</button>
           <button class="deletar-btn" data-id="${id}">Deletar</button>
+          <button class="visualizar-btn" data-id="${id}"> ${link ? `<a href="${link}" target="_blank">Ver Projeto</a>` : ""}</button>
         </div>
       `;
       adminContainer.appendChild(projetoDiv);

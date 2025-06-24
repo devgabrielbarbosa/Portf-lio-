@@ -50,12 +50,20 @@ document.addEventListener("DOMContentLoaded", async () => {
       card.classList.add("projeto-card");
 
       card.innerHTML = `
-      <div class="projeto">
-        <img src="${projeto.imagem}" alt="${projeto.titulo}" />
-        <h3>${projeto.titulo}</h3>
-        <p class="descricao-produto">${projeto.descricao}</p>
-        <button class="btn-projeto"><a href="${projeto.link}" target="_blank">Ver Projeto</a></button>
-      </div>
+     <div class="projeto">
+  <img src="${projeto.imagem}" alt="${projeto.titulo}" />
+  <h3>${projeto.titulo}</h3>
+  <p class="descricao-produto expandido">${projeto.descricao}</p>
+
+  <div class="botoes-projeto">
+   <button class="toggle-descricao">Leia mais</button>
+  <button class="btn-projeto">
+    <a href="${projeto.link}" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+  </button>
+  </div>
+ 
+</div>
+
       `;
 
       portfolioContainer.appendChild(card);
@@ -65,6 +73,20 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
 // Ativa o menu ao carregar a página
+});
+// Após o código que monta os projetos
+const projetosContainer = document.getElementById('projetos-portfolio'); // Sem espaço
+
+projetosContainer.addEventListener('click', (e) => {
+  if (e.target.classList.contains('toggle-descricao')) {
+    const card = e.target.closest('.projeto'); // Pega o card
+    const descricao = card.querySelector('.descricao-produto'); // Pega o parágrafo da descrição
+
+    descricao.classList.toggle('expandido'); // Alterna classe
+    e.target.textContent = descricao.classList.contains('expandido')
+      ? 'Mostrar menos'
+      : 'Leia mais';
+  }
 });
 
 

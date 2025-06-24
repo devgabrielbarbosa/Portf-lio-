@@ -1,0 +1,37 @@
+
+/* ===========================
+   Rodapé
+=========================== */
+.dev-footer {
+  background: #111;
+  padding: 2rem;
+  color: #bbb;
+  border-top: 1px solid #222;
+  text-align: center;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 1px0;
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: #4e9af1;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: text-decoration 0.3s;
+
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}

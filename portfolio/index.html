@@ -5,14 +5,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gabriel Lemos Barbosa | Portfólio</title>
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="../style.css" />
 </head>
 
 <body>
   <header>
     <nav>
       <div class="navbar">
-        <img id="logo" src="./img/logo.png" alt="">
+        <img id="logo" src="../img/logo.png" alt="">
         <button id="btnMenu" class="menu-toggle">☰</button>
         <ul class="nav-links">
           <li><a href="#home">Início</a></li>
@@ -51,6 +51,8 @@
     <section id="projetos" class="secao">
       <h2>Projetos</h2>
       <div class="cards-projetos" id="projetos-portfolio"></div>
+</div>
+
     </section>
 
     <section id="contato">
@@ -58,11 +60,11 @@
       <form action="https://formspree.io/f/movdywrb" method="POST">
         <label>
           Seu E-mail:
-          <input type="email" name="email">
+          <input type="email" name="email" required placeholder="Digite seu e-mail" />
         </label>
         <label>
           Sua Mensagem:
-          <textarea name="message"></textarea>
+          <textarea name="message" required placeholder="Digite sua mensagem"></textarea>
         </label>
         <!-- your other form fields go here -->
         <button type="submit" class="btn-enviar">Enviar</button>
@@ -100,7 +102,7 @@
     </div>
   </footer>
   <script type="module" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script type="module" src="./script.js"></script>
+  <script type="module" src="../script/script.js"></script>
   <script type="module" src="../firebase/firebase-config.js"></script>
 </body>
 </html>
