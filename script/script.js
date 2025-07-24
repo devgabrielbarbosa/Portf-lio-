@@ -117,21 +117,25 @@ const ctx = document.getElementById('graficoTecnologias').getContext('2d');
 const graficoTecnologias = new Chart(ctx, {
   type: 'bar', // pode trocar para 'pie', 'doughnut', 'line' etc
   data: {
-    labels: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
+    labels: ['HTML', 'CSS', 'JavaScript', 'Firebase', 'React', 'Node'], // coloque aqui as tecnologias que você domina
     datasets: [{
       label: 'Nível de Conhecimento',
-      data: [90, 85, 80, 70], // coloque aqui um nível que faça sentido para você (0-100)
+      data: [90, 85, 80, 70, 48, 37], // coloque aqui um nível que faça sentido para você (0-100)
       backgroundColor: [
         'rgba(227, 76, 38, 0.7)',    // vermelho HTML
         'rgba(38, 77, 228, 0.7)',    // azul CSS
         'rgba(247, 223, 30, 0.7)',   // amarelo JS
-        'rgba(255, 134, 0, 0.7)'     // laranja Firebase
+        'rgba(255, 134, 0, 0.7)',     // laranja Firebase
+        'rgba(0, 204, 102, 0.7)',    // verde React
+        'rgba(153, 51, 255, 0.7)'     //
       ],
       borderColor: [
         'rgba(227, 76, 38, 1)',
         'rgba(38, 77, 228, 1)',
         'rgba(247, 223, 30, 1)',
-        'rgba(255, 134, 0, 1)'
+        'rgba(255, 134, 0, 1)',
+        'rgba(0, 204, 102, 1)',
+        'rgba(153, 51, 255, 1)'
       ],
       borderWidth: 1
     }]
