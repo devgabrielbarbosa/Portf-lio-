@@ -82,4 +82,7 @@
 nav ul li a:hover::after {
   width: 100%;
 }
+ .descricao-produto.expandido {
+    overflow-y: auto;
+  }
 }

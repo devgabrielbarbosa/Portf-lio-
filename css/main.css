@@ -143,30 +143,35 @@ img {
 
 
 .descricao-produto {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    /* limita a 3 linhas */
-    -webkit-box-orient: vertical;
-    height: 100px;
-    /* altura para ~3 linhas */
-    transition: max-height 0.3s ease;
+  height: 100px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  transition: all 0.3s ease;
 }
 
+/* Só mostra scroll quando expandido */
 .descricao-produto.expandido {
-    -webkit-line-clamp: unset;
-    line-clamp: unset;
-    /* remove o limite de linhas */
-    -webkit-box-orient: unset;
-    max-height: none;
-    /* remove o limite de altura */
-    overflow-y: auto;
-    /* scroll dentro do card */
-    height: 100px;
-    /* altura máxima definida pro scroll */
-    display: block;
+  height: 100px;
+  overflow-y: auto;
+  -webkit-line-clamp: unset;
+  -webkit-box-orient: unset;
+  line-clamp: 4;
+  display: block;
 }
+
+
+.descricao-produto.expandido::-webkit-scrollbar {
+    width: 4px;
+}
+
+.descricao-produto.expandido::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
 
 /* Animação suave */
 @keyframes fadeIn {

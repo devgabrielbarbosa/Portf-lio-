@@ -50,21 +50,19 @@ document.addEventListener("DOMContentLoaded", async () => {
       card.classList.add("projeto-card");
 
       card.innerHTML = `
-     <div class="projeto">
-  <img src="${projeto.imagem}" alt="${projeto.titulo}" />
-  <h3>${projeto.titulo}</h3>
-  <p class="descricao-produto expandido">${projeto.descricao}</p>
+  <div class="projeto">
+    <img src="${projeto.imagem}" alt="${projeto.titulo}" />
+    <h3>${projeto.titulo}</h3>
+    <p class="descricao-produto">${projeto.descricao}</p>
 
-  <div class="botoes-projeto">
-   <button class="toggle-descricao">Leia mais</button>
-  <button class="btn-projeto">
-    <a href="${projeto.link}" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
-  </button>
+    <div class="botoes-projeto">
+      <button class="toggle-descricao">Leia mais</button>
+      <button class="btn-projeto">
+        <a href="${projeto.link}" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+      </button>
+    </div>
   </div>
- 
-</div>
-
-      `;
+`;
 
       portfolioContainer.appendChild(card);
     });
@@ -88,6 +86,15 @@ projetosContainer.addEventListener('click', (e) => {
       : 'Mostrar menos';
   }
 });
+
+document.querySelectorAll('.toggle-descricao').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const descricao = btn.closest('.projeto').querySelector('.descricao-produto');
+    descricao.classList.toggle('expandido');
+    btn.textContent = descricao.classList.contains('expandido') ? 'Ver menos' : 'Leia mais';
+  });
+});
+
 
 
 const elementos = document.querySelectorAll(".projeto");
